@@ -1,0 +1,1 @@
+SELECT SUM(o.ord_amnt * p.price) AS "Total Amount", o.ord_amnt,p.name,c.name FROM orders o INNER JOIN products p ON p.id = o.pid INNER JOIN customers c ON c.id = o.cid GROUP BY c.id, p.name;
